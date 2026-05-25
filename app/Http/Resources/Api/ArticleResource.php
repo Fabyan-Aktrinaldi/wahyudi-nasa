@@ -20,8 +20,8 @@ class ArticleResource extends JsonResource
             'slug' => $this->slug,
             'content' => $this->content,
             'image' => $this->image ? asset('storage/' . $this->image) : null,
-            'category' => $this->category ? $this->category->name : null,
-            'author' => $this->author ? $this->author->name : null,
+            'category' => $this->category ? $this->category->nama_kategori : null,
+            'author' => $this->user ? $this->user->name : null,
             'created_at' => $this->created_at->toIso8601String(),
             'updated_at' => $this->updated_at->toIso8601String(),
         ];
